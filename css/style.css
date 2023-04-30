@@ -2,14 +2,74 @@
     display: none;
 }
 
+body{
+    padding: 100px;
+    width: 640px;
+    font-family: 'Lexend Deca', sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+  }
+
 img {
+    background-size: cover;
     position:absolute;
-    width:100%;
-    height:100%;
+    width:130%;
+    height:130%;
     left: 0px;
     top: 0px;
-    right:0px;
+    right:10px;
     bottom:0px;
     z-index: -1;
     opacity:80%;
+}
+
+p {
+    font-weight: bold;
+    margin: auto;
+}
+
+li:nth-child(-n+3){
+    border:2px indianred;
+    margin-bottom: 0.5px;
+}
+
+li:nth-child(even) {
+    background-color: lightyellow;
+}
+
+
+form { 
+    margin: 0 auto; 
+    text-align:center;
+
     }
+
+h1,.h1 {
+    font-size: 400%;
+}
+
+h2,.h2 {
+    font-size: 285.7%;
+}
+
+h3,.h3 {
+    font-size: 228.5%;
+}
+
+
+h4,.h4 {
+    font-size: 171.4%
+}
+
+h5,.h5 {
+    font-size: 150%
+}
+
+h6,.h6 {
+    font-size: 100%;
+}
+
+h8,.h8 {
+    font-size: 70%;
+}

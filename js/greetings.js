@@ -5,6 +5,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const curhour = new Date();
 //const loginButton = document.querySelector("#login-form button");
 const HIDDEN_CLASSNAME = "hidden"; //uppercase means all values are string
 //const link = document.querySelector("a");
@@ -35,8 +36,14 @@ function onLoginSubmit(event){
     
 function paintGreeting(savedUsername){
    // const savedUsername = localStorage.getItem(USERNAME_KEY);
-    greeting.innerText=`Hi, ${savedUsername}`;
+   //f()
+   if (curhour.getHours()>12){
+    greeting.innerText=`Good afternoon, ${savedUsername}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+   }if (curhour.getHours()>6 && curhour.getHours()<12){
+    greeting.innerText=`Good morning, ${savedUsername}!`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+   }
 }
 //loginButton.addEventListener("click", onLoginBtnClick);
 //loginForm.addEventListener("submit", onLoginSubmit); //by doing nothing, javascript will call our function with some information, which is event object.

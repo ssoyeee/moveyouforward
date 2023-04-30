@@ -1,6 +1,11 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input"); //document.queryselector("#todo-form input")
 const toDoList = document.getElementById("todo-list");
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth()+1;
+const day = today.getDate();
+
 
 const TODOS_KEY = "todos"
 
@@ -23,18 +28,22 @@ function deleteToDo(event){
 }
 function paintToDo(newToDo){
     //console.log("i will paint", newToDo);
+ 
     const li = document.createElement("li");
     li.id = newToDo.id;
     const span = document.createElement("span");
     span.innerText = newToDo.text;
-
+    const curdate = document.createElement("h8");
+    curdate.innerText = `created on: ${year}/${month}/${day}`;
     const button = document.createElement("button");
-    button.innerText = "❎";
+    button.innerText = "🗑️";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(curdate);
     toDoList.appendChild(li);
-}
+}     
+
 
 function handleToDoSubmit(event){
     event.preventDefault();
@@ -56,9 +65,9 @@ function handleToDoSubmit(event){
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-function sayHello(item){
-    console.log("this is the turn of", item);
-}
+// function sayHello(item){
+//     console.log("this is the turn of", item);
+// }
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 console.log(savedToDos); //just a string

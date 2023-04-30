@@ -5,33 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Momentum App</title>
+    <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+
+    <title>Move you forward</title>
 </head>
 <body>
-    <form class="hidden" id = "login-form">
+    <form class="hidden" id = "login-form" >
         <input
         required
+        size="30"
         maxlength="15"
         type="text" 
+        wrap="soft"
         placeholder="What is your name?"/>
         <input type="submit" value="Log In"/>  
+        <input type="image" src="submitrmv.png" width="50" height="30">
     </form>
     <h1 id = "greeting" class="hidden"></h1> 
-    <h2 id = "clock">00:00:00</h2>
+    <h2 id = "clock">00:00:00</h2> 
     <form id = "todo-form">
-        <input type="text" placeholder="Write a List of To Do and Press Enter" required/>
+        <input 
+        style="height:50px; font-size:15px" type="text" placeholder="What is your main focus for today?" required size="60"/>
+        <br><input type="image" src="submitrmv.png" width="50" height="50">
     </form>
+    <h5>🗓️To-Do🗓️</h5>
     <ul id="todo-list">
   
     </ul>
+    <h5>🚀Today's Quote🚀</h5>
     <div id="quote">
         <span></span>
         <span></span>
     </div>
-    <div id ="weather">
+    <div id="weather" style="font-style: oblique 2.0em/1.0em; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"  >
         <span></span>
         <span></span>
     </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>

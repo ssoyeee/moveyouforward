@@ -24,6 +24,11 @@ function onLoginSubmit(event){
     localStorage.setItem(USERNAME_KEY, typedUsername);
     //greeting.innerText="Hi " + username;
     paintGreeting(typedUsername);
+    const h4 = document.querySelector("#h4");
+    if(typedUsername!==null){
+        h4.innerText="";
+    }
+    
 }
     // console.log(username);
     // if(username === ""){

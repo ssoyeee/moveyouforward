@@ -8,5 +8,6 @@ https://ssoyeee.github.io/moveyouforward/
 <img width="1552" alt="image" src="https://user-images.githubusercontent.com/111319810/235384792-930f2a6d-30b3-4824-aba3-9a586dd97995.png">
 
 Main Feature
-1) To-Do List
+1) Keep your task organized
 2) Current Location/Weather
+3) Keep yourself motivated, Today's Quote can help you motivated 

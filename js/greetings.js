@@ -37,11 +37,17 @@ function onLoginSubmit(event){
 function paintGreeting(savedUsername){
    // const savedUsername = localStorage.getItem(USERNAME_KEY);
    //f()
-   if (curhour.getHours()>12){
+   if (curhour.getHours()>=12 && curhour.getHours()<18){
     greeting.innerText=`Good afternoon, ${savedUsername}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
-   }if (curhour.getHours()>6 && curhour.getHours()<12){
+   }if (curhour.getHours()>=6 && curhour.getHours()<12){
     greeting.innerText=`Good morning, ${savedUsername}!`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+   }if (curhour.getHours()>=18 && curhour.getHours()<=23 ){
+    greeting.innerText=`Good evening, ${savedUsername}!`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+   }if (curhour.getHours()>=0 && curhour.getHours()<6){
+    greeting.innerText=`Good night, ${savedUsername}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
    }
 }

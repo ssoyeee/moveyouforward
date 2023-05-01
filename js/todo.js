@@ -5,6 +5,7 @@ const today = new Date();
 const year = today.getFullYear();
 const month = today.getMonth()+1;
 const day = today.getDate();
+const prevTodo = document.getElementById("prevtodo");
 
 
 const TODOS_KEY = "todos"
@@ -14,6 +15,7 @@ let toDos =[];
 
 function saveToDos(){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+    
 }
 
 function deleteToDo(event){
@@ -24,8 +26,11 @@ function deleteToDo(event){
     li.remove();
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     saveToDos();
-
+    
 }
+
+   
+    
 function paintToDo(newToDo){
     //console.log("i will paint", newToDo);
  
@@ -34,13 +39,14 @@ function paintToDo(newToDo){
     const span = document.createElement("span");
     span.innerText = newToDo.text;
     const curdate = document.createElement("h8");
-    curdate.innerText = `created on: ${year}/${month}/${day}`;
+    curdate.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + `created on: ${year}/${month}/${day}`+ "\xa0\xa0\xa0";
     const button = document.createElement("button");
+    prevTodo.innerText="";
     button.innerText = "🗑️";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
-    li.appendChild(button);
     li.appendChild(curdate);
+    li.appendChild(button);
     toDoList.appendChild(li);
 }     
 
@@ -80,7 +86,11 @@ if(savedToDos !== null){
    toDos = parsedToDos;
    parsedToDos.forEach(paintToDo); //paintToDo({text:"a", id:1212121})
 
+}else{
+    prevTodo.innerText=`"Please add your to-do list here."`;
 }
+    
+
 
 // [1,2,3,4].filter(hotFilter)
 // hotFilter(1) = 1

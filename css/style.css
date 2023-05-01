@@ -1,9 +1,23 @@
 .hidden{
     display: none;
 }
+#loginbtn{
+    background-color: #555555;
+    color: white;
+    border-radius: 0.5em;
+
+}
+header{
+    display:flex;
+}
+nav{
+    margin-left:auto;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
 
 body{
-    padding: 100px;
+
     width: 640px;
     font-family: 'Lexend Deca', sans-serif;
     justify-content: center;
@@ -21,7 +35,11 @@ img {
     right:10px;
     bottom:0px;
     z-index: -1;
-    opacity:80%;
+    opacity:0.9;
+}
+
+div{
+    text-align: center;
 }
 
 p {
@@ -29,15 +47,29 @@ p {
     margin: auto;
 }
 
-li:nth-child(-n+3){
-    border:2px indianred;
-    margin-bottom: 0.5px;
-}
-
 li:nth-child(even) {
-    background-color: lightyellow;
+    background-color: #ECF9F8;
 }
+ ul{
+   position: flex;
+   align-items: center;
+   align-content: center;
+    align-self: center;
+} 
 
+ ol{
+    justify-content: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    position: flex;
+    background-color: azure;
+} 
+
+li:nth-child(odd) {
+    background-color: #ECF9F8;
+}
 
 form { 
     margin: 0 auto; 
@@ -46,28 +78,38 @@ form {
     }
 
 h1,.h1 {
-    font-size: 400%;
+    color: whitesmoke;
+    font-size: 300%;
 }
 
 h2,.h2 {
-    font-size: 285.7%;
+    color: floralwhite;
+    font-size: 185.7%;
 }
 
 h3,.h3 {
-    font-size: 228.5%;
+    color: floralwhite;
 }
 
 
 h4,.h4 {
-    font-size: 171.4%
+    justify-content: center;
+    justify-self: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: floralwhite;
 }
 
-h5,.h5 {
-    font-size: 150%
+h5{
+    font-size: 1.2em;
+    color: floralwhite;
+    font-weight: bold;
+
 }
 
 h6,.h6 {
-    font-size: 100%;
+    color: floralwhite;
+    font-size: 80%;
 }
 
 h8,.h8 {
